@@ -1,3 +1,4 @@
+CC65_NESLIB = $(HOME)/cc65/lib/nes.lib 
 .PHONY: clean all
 
 .PRECIOUS: *.o
@@ -19,4 +20,4 @@ crt0.o: crt0.s
 	rm $*.s
 
 %.nes: %.o crt0.o
-	ld65 -C nes.cfg -o $@ crt0.o $< runtime.lib
+	ld65 -t nes -o $@ crt0.o $< $(CC65_NESLIB)
