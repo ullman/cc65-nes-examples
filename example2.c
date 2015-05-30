@@ -69,7 +69,7 @@ void main(void)
 	{
 		ppu_waitnmi();//wait for next TV frame
 
-		spr=40;
+		spr=0;
 
 		for(i=0;i<BALLS_MAX;++i)
 		{
